@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family:Arial, Helvetica;
+        }
+        h1{
+            padding: 0 0 0 40px;
+        }
+        .containor{
+            background: lightgray;
+            width: 600px;
+            margin: 50px auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+            grid-template-rows: repeat(2,100px);
+        }
+        .items1{
+            background:orangered;order: 3;
+        }
+        .items2{
+            background:yellowgreen ;order: 2;
+
+        }
+        .items3{
+            background:mediumpurple;order: 1;
+        }
+        .items4{
+            background:hotpink;order: ;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="containor">
+        <div class="items1">Header</div>
+        <div class="items2">Menu</div>
+        <div class="items3">Box1</div>
+        <div class="items4">Box2</div>
+    </div>
+</body>
+</html>

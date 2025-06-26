@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 150px;
+            height: 150px;
+            background-color:black;
+            margin-left: 20px;
+            animation:sample 2s 2s;
+            animation-fill-mode: backwards;
+        }
+        .box:hover{
+            animation-play-state:running;
+        }
+        @keyframes sample{
+            0%{background: yellow; width:250px;}
+            50%{background: green; width:350px;}
+            100%{background:green; width:450px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin:0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            list-style: none;
+            text-decoration: none;
+        }
+        .header{
+            position: fixed;
+            top:0;
+            left: 0;
+            width: 100%;
+            background: lawngreen;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000px;
+        }
+        .navbar ul{
+            display: flex;
+        }
+        .navbar ul li a{
+            font-size: 18px;
+            font-weight: 400;
+            color: #fff;
+            margin:10px;
+            padding:8px 12px;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span>MD Talha</span></a>
+
+        <nav class="navbar">
+          <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">gellery</a></li>
+            <li><a href="#">services</a></li>
+            <li><a href="#">contact</a></li>
+          </ul>
+        </nav>
+
+        <div>
+            <a href="#" class="btn">download cv</a>
+        </div>
+    </header>
+</body>
+</html>

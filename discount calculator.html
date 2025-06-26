@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discount Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    #result {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Discount Calculator</h2>
+    <label>Enter Price (INR):</label>
+    <input type="number" id="price" placeholder="e.g. 1000" />
+
+    <label>Enter Discount (%):</label>
+    <input type="number" id="discount" placeholder="e.g. 10" />
+
+    <button onclick="calculateFinalPrice()">Calculate</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function calculateFinalPrice() {
+      let price = parseFloat(document.getElementById('price').value);
+      let discountRate = parseFloat(document.getElementById('discount').value);
+
+      if (isNaN(price) || isNaN(discountRate)) {
+        document.getElementById('result').innerText = 'Please enter valid numbers.';
+        return;
+      }
+
+      // Currying-style function
+      const discount = rate => price => price - (price * rate / 100);
+      const getDiscountedPrice = discount(discountRate);
+      const finalPrice = getDiscountedPrice(price);
+
+      document.getElementById('result').innerText = Final ; after ${discountRate} % discount: ₹${finalPrice.toFixed(2)};
+    }
+  </script>
+</body>
+</html>

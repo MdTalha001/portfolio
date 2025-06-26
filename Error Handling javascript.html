@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = prompt("Enter The First Number")
+        let b = prompt("Enter The Second Number")
+        if(isNaN(a) || isNaN(b)){
+            throw SyntaxError("Sorrry this is no allowed")
+        }
+        let sum = parseInt(a) + parseInt(b)
+        console.log("The sum is = ", sum)
+
+        try {
+            console.log("The sum is = ",sum)
+        }
+        catch{
+            console.log("Error Detected")
+        }
+        finally{
+            console.log("files are being closed and db connection is being closed")
+        }
+    </script>
+</body>
+
+</html>

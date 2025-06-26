@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .container .service {
+            flex: 1 1 20rem;
+            padding-block: 2rem;
+            margin-inline: 1rem;
+            text-align: center;
+            border-radius: 20px;
+            margin-top: 40px;
+            border: 0.2rem solid #000;
+            background-color: #333;
+            transition: 0.5s ease;
+        }
+
+        .container .service:hover {
+            border-color: #16ff00;
+            transform: scale(1.02);
+        }
+
+        .service i {
+            font-size: 3.2rem;
+            color: #16ff00;
+            margin-bottom: 6px;
+        }
+
+        .service h3 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 6px;
+            color: #ffffff;
+        }
+
+        .service p {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .service .btn {
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            background-color: #16ff00;
+            color: #ffffff;
+        }
+        .btn:hover{
+            box-shadow: 0 0 25px #16ff00,
+                        0 0 25px #16ff00;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="service">
+            <i class="bx bx-code-alt"></i>
+            <h3>Web Development</h3>
+            <p>ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit rerum doloremque vero eum,
+                dolor cupiditate nulla neque eos dolorem commodi perferendis maxime alias itaque sit.</p>
+
+            <a href="#" class="btn">Read more</a>
+        </div>
+
+        <div class="service">
+            <i class="bx bx-palette"></i>
+            <h3>UI/UX Desiginer</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit rerum doloremque vero eum,
+                dolor cupiditate nulla neque eos dolorem commodi perferendis maxime alias itaque sit.
+            </p>
+            <a href="#" class="btn">Read more</a>
+        </div>
+
+        <div class="service">
+            <i class="bx bxl-android"></i>
+            <h3>App Development</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit rerum doloremque vero eum,
+                dolor cupiditate nulla neque eos dolorem commodi perferendis maxime alias itaque sit.
+            </p>
+            <a href="#" class="btn">Read more</a>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

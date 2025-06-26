@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 3cm;
+            height: 3cm;
+            background-color: brown;
+            animation: sample;
+            animation-duration: 2s;
+            position: relative;
+            animation-iteration-count: 3;
+        }
+        @keyframes sample{
+            0%{left: 0; top: 0;}
+            25%{left: 200px; top:0%;}
+            50%{top: 200px; left: 200px;}
+            75%{top: 200px; left: 0px;}
+            100%{top: 0px; left: 0px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>

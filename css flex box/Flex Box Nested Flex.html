@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica;
+        }
+        h1{
+            padding: 0 0 0 40px;
+        }
+        .containor{
+            background-color: aqua;
+            margin: 50px;
+            padding:0;
+            border: 3px solid black;
+            
+            
+            display: flex;
+            flex-direction: column;
+           
+        }
+        .items{
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            padding: 0px;
+            height: 100px;
+            
+        }
+        .items1{
+            background: orange;
+            
+        }
+        .items2{
+            background: grey;
+            display: flex;
+        }
+        .items2 > .subitem{
+            background: wheat;
+            color: mediumpurple;
+            flex-grow: 1;
+            margin: 5px;
+        }
+        .items3{
+            background: blueviolet;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="containor">
+        <div class=" items items1">One</div>
+        <div class=" items items2">
+        <div class="subitem subitems1">A</div>
+        <div class="subitem subitems2">B</div>
+        <div class="subitem subitems3">C</div>
+    </div>
+        <div class=" items items3">Three</div>
+        
+    </div>
+</body>
+</html>

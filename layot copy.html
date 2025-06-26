@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: arial;
+            display: flex;
+            flex-direction: column;
+        }
+        a{
+            text-decoration: none;
+        }
+        header{
+            background: #566c2b;
+            display: flex;
+            align-items: center;
+        }
+        header a{
+            color: #fff;
+        }
+        header ul{
+            list-style: none;
+            display: flex;
+            
+        }
+        #logo{
+            margin: auto;
+            font-size: 25px;
+        }
+        #menu li{
+            padding: 15px;
+            
+        }
+        .service-containor{
+            display: flex;
+            justify-content: space-between;
+        }
+        .service-box{
+            border: 3px solid #eee;
+            
+        }
+        #main{
+            display: flex;
+        }
+        aside{
+            padding: 10px;
+            flex:0 0 20vw;
+            background: beige;
+        }
+        aside ul{
+            list-style: none;
+            padding: 0;
+        }
+        aside ul a {
+            color:#566c2b ;
+            padding: 10px;
+            display: block;
+            border-bottom: 1px solid grey;
+            
+        }
+        footer{
+            background: #566c2b;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 25px;
+        }
+        .call-to-action{
+            align-self: flex-start;
+            margin: auto;
+        }
+        .call-to-action a{
+            padding: 8px 13px;
+            color: #fff;
+            background:grey;
+            border: 2px solid transparent ;
+        }
+        .call-to-action a:hover{
+           background:transparent;
+           border: 2px solid blueviolet;
+           
+        }
+        @media screen and (max-width:850px){
+            
+            header{
+                flex-direction: column;
+            }
+            #logo{
+                order: -1;
+            }
+            #main{
+                flex-direction: column;
+            }
+                aside{
+                flex: 0 0 30px;
+            }
+            .service-containor{
+            flex-direction: column;
+            align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="menu">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="logo">
+            <a href="">Talha Official</a>
+        </div>
+        <nav id="social-link">
+            <ul>
+                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </nav>
+    </header><br>
+    <div id="main">
+        <aside class="">
+            <ul>
+                <li><a href="">some link</a></li><br>
+                <li><a href="">some link</a></li><br>
+                <li><a href="">some link</a></li><br>
+                <li><a href="">some link</a></li><br>
+                <li><a href="">some link</a></li><br>
+            </ul>
+        </aside>
+        <article class="">
+            <h2>Welcome To Our Website</h2><br>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum error ratione obcaecati dignissimos ipsam nemo doloribus unde accusantium delectus, ea fuga provident perferendis reprehenderit natus labore officiis dicta aliquam! Dignissimos perspiciatis est odit provident assumenda quo dicta, accusantium illum veritatis nostrum ab iusto. Eligendi sunt odit rem accusamus eos fugiat quae nemo repudiandae expedita asperiores inventore, magni enim delectus earum atque ipsa. Fugit placeat temporibus ea reprehenderit tempora eligendi sed tempore voluptatem dignissimos ab voluptatibus minus odit velit omnis, libero sunt illum animi! Quod accusamus error obcaecati natus ea fuga eius placeat, voluptate dolore nihil ducimus eum commodi libero porro.</p><br>
+           
+            <h2>Our Services</h2>
+            <div class="service-containor">
+                <div class="service-box">
+                    <div class="service-img">
+                        <img src="C:\Users\julka\OneDrive\Desktop\Images\developer.jpg">
+                    </div>
+                    <div class="service-title">
+                        <h3>Web Designing</h3><br>
+                    </div>
+                    <div class="service-desc">
+                        <p>Lorem.
+                        Ex.
+                        Autem.
+                        Reprehenderit!
+                        Aut.
+                        Facilis.
+                        Maiores.
+                        Nobis?
+                        Ipsum.
+                        Error.</p><br><br>
+                        
+                    </div>
+                    <div class="call-to-action">
+                        <a href="">Read more</a><br><br>
+                    </div>
+                </div>
+
+                <div class="service-box">
+                    <div class="service-img">
+                        <img src="C:\Users\julka\OneDrive\Desktop\Images\desiginer.jpg" alt=" ">
+                    </div>
+                    <div class="service-title">
+                        <h3>Web Development</h3><br>
+                    </div>
+                    <div class="service-desc">
+                        <p>Lorem.
+                        Ex.
+                        Autem.
+                        Reprehenderit!
+                        Aut.
+                        Facilis.
+                        Maiores.
+                        Nobis?
+                        Ipsum.
+                        Error.</p><br><br>
+                        
+                    </div>
+                    <div class="call-to-action">
+                        <a href="">Read more</a>
+                    </div>
+                </div>
+
+                <div class="service-box">
+                    <div class="service-img">
+                        <img src="c:\Users\julka\Downloads\coder1.jpg" alt=" ">
+                    </div>
+                    <div class="service-title">
+                        <h3>Mobile App Development</h3><br>
+                    </div>
+                    <div class="service-desc">
+                        <p>Lorem.
+                        Ex.
+                        Autem.
+                        Reprehenderit!
+                        Aut.
+                        Facilis.
+                        Maiores.
+                        Nobis?
+                        Ipsum.
+                        Error.</p><br><br>
+                        
+                    </div>
+                    <div class="call-to-action">
+                        <a href="">Read more</a><br>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+    <footer>
+        Made By Talha
+    </footer>
+</body>
+</html>

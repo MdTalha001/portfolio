@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica;
+         }
+         .card{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            line-height: 300px;
+            margin: -150px;
+            background:white;
+            color: #03446A;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0  0 15px rgba(0,0,0,1);
+         /* animation: sample;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;*/
+            animation: sample 2s infinite alternate;
+            animation-delay: 2s;
+         }
+         @keyframes sample{
+            0%{
+               border-radius: 0%;
+            }
+            100%{
+            border-radius: 50%; 
+            background-color: tomato;
+            color: white;}
+         }
+    </style>
+</head>
+<body>
+    <div class="card">Talha</div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+
+        }
+
+        .container {
+            width: 400px;
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+          
+        }
+
+        .container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .content {
+            position: absolute;
+            left: 0;
+            bottom: -100%;
+            height: 100%;
+            width: 100%;
+            background: rgb(0,0,0,0.6);
+            padding: 10px;
+            transition: all 0.4s;
+            border-radius: 10px;
+            
+        }
+        .content h2{
+            text-align: center;
+            margin-top: 50px;
+            color: aliceblue;
+        }
+        .content p{
+            text-align: center;
+            margin-top: 10px;
+            font-size: 18px;
+            color:aliceblue
+
+        }
+        .container:hover .content{
+            bottom:0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="/images/design.jpg" alt="design">
+        <div class="content">
+            <h2>Designer</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam praesentium maxime minus ducimus. Dicta,
+                porro!</p>
+        </div>
+    </div>
+</body>
+
+</html>

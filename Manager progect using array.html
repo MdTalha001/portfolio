@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Marks Manager</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    input, button {
+      padding: 10px;
+      margin: 5px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Student Marks Manager</h2>
+
+    <input type="text" id="name" placeholder="Enter Name" />
+    <input type="number" id="marks" placeholder="Enter Marks" />
+    <button onclick="addStudent()">Add Student</button>
+
+    <h3>Student List:</h3>
+    <ul id="studentList"></ul>
+
+    <p><strong>Total Students:</strong> <span id="total"></span></p>
+    <p><strong>Average Marks:</strong> <span id="average"></span></p>
+
+    <h4>Search Student:</h4>
+    <input type="text" id="searchInput" placeholder="Search by Name" oninput="searchStudent()">
+
+    <h4>Students with Marks > 50:</h4>
+    <ul id="highScorers"></ul>
+  </div>
+
+  <script>
+    let students = [];
+
+    function addStudent() {
+      const name = document.getElementById('name').value.trim();
+      const marks = parseFloat(document.getElementById('marks').value);
+      if(name && !isNaN(marks)) {
+        students.push({ name, marks });
+        document.getElementById('name').value = '';
+        document.getElementById('marks').value = '';
+        updateUI();
+      }
+    }
+
+    function updateUI() {
+      const list = document.getElementById('studentList');
+      list.innerHTML = '';
+      students.forEach((s, i) => {
+        list.innerHTML += `<li>${i+1}. ${s.name} - ${s.marks}</li>`;
+      });
+
+      document.getElementById('total').innerText = students.length;
+      const avg = students.reduce((acc, curr) => acc + curr.marks, 0) / (students.length || 1);
+      document.getElementById('average').innerText = avg.toFixed(2);
+
+      const high = students.filter(s => s.marks > 50);
+      document.getElementById('highScorers').innerHTML = high.map(s => `<li>${s.name} - ${s.marks}</li>`).join('');
+    }
+
+    function searchStudent() {
+      const keyword = document.getElementById('searchInput').value.toLowerCase();
+      const filtered = students.filter(s => s.name.toLowerCase().includes(keyword));
+      document.getElementById('studentList').innerHTML = filtered.map((s, i) => `<li>${i+1}. ${s.name} - ${s.marks}</li>`).join('');
+    }
+  </script>
+</body>
+</html>

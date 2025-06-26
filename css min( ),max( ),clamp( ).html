@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: sans-serif;
+            background: black;
+        }
+        .hero{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding:2rem;
+        }
+        .hero-content{
+            text-align: center;
+            width: clamp(300px,80%,800px);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 0 20 rgb(0, 0,0,0.1);
+        }
+        .hero-content h1{
+            font-size: clamp(2rem,5vw,3rem);
+            color:white;
+        }
+        .hero-content p{
+            margin:1rem 0;
+            font-size: clamp(1rem,2.5vw,1.5rem);
+            color:aqua;
+        }
+        .hero-content button{
+            padding:0.8rem 1.5rem;
+            font-size: 1rem;
+            background-color: #007bff;
+            color:#fff;
+            border: 2px solid white;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            width: min(200px,50%);
+            transition: all 0.5s ease-in-out;
+        }
+        .hero-content button:hover{
+            color:black;
+            font-weight: bold;
+            box-shadow: 0 0 45px rgb(190, 231, 9);
+        }
+
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>welcome to My site</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, excepturi veritatis maxime adipisci
+                voluptatem aspernatur sed cupiditate possimus, corrupti ducimus molestias et repudiandae iste quasi
+                perferendis asperiores ad repellendus ullam!</p>
+            <button>Hire me</button>
+        </div>
+    </section>
+</body>
+
+</html>

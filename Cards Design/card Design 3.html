@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+        }
+
+        .card {
+            background: #000;
+            padding:20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            border: 3px solid blue;
+        }
+        .card:hover{
+            border-color: blue;
+            box-shadow: 0 0 25px blue;
+            transform: scale(1.02);
+        }
+        .card-image img {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            box-shadow: 0 0 10px #fff;
+            border-radius: 10px;
+        }
+
+        .card .card-content {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 10px;
+            color:#fff;
+        }
+        .card-content .btn{
+            display: inline-block;
+            padding:8px 12px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: 100;
+            background-color: chocolate;
+            border-radius: 10px;
+            margin-top: 15px;
+            text-decoration: none;
+            transition: all 0.5s ease-in-out;
+            transform: translate(1);
+            
+        }
+        .btn:hover{
+            transition: 0.3s ease;
+            color: black;
+            font-weight: 500;
+            box-shadow: 0 0 45px #c3ff00;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-image">
+                <img src="../images/development.jpg" alt="development">
+            </div>
+            <div class="card-content">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, debitis eveniet laboriosam
+                    molestiae, ipsum est aut pariatur vero amet omnis nobis quibusdam, nulla nisi cumque aliquid numquam
+                    perferendis dolorem esse?</p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="../images/animation.jpg" alt="Animator">
+            </div>
+            <div class="card-content">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, debitis eveniet laboriosam
+                    molestiae, ipsum est aut pariatur vero amet omnis nobis quibusdam, nulla nisi cumque aliquid numquam
+                    perferendis dolorem esse?</p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="../images/coder.jpg" alt="coder">
+            </div>
+            <div class="card-content">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, debitis eveniet laboriosam
+                    molestiae, ipsum est aut pariatur vero amet omnis nobis quibusdam, nulla nisi cumque aliquid numquam
+                    perferendis dolorem esse?</p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="../images/design.jpg" alt="Designer">
+            </div>
+            <div class="card-content">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, debitis eveniet laboriosam
+                    molestiae, ipsum est aut pariatur vero amet omnis nobis quibusdam, nulla nisi cumque aliquid numquam
+                    perferendis dolorem esse?</p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

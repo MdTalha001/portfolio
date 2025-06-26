@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //     1 program in object
+
+        var a = {
+        fname:'MD',
+        lname:'Talha',
+        age:20,
+        country:'India',
+        Favorite :['Sikandar','Doubble Attack','Tiger'],
+        salary: function(){
+            return 25000;
+        },
+
+        
+    }
+    document.write(a.Favorite[0]);
+
+  
+    // var person = new Object()
+
+    // person.firstname = "MD";
+    // person.lastname = "Talha";
+    // person.age = 20;
+
+    // document.write(person['firstname'])
+    // console.log(person);
+
+    // Array of Object/
+
+    var student = [
+        {name:'MD', lastname:'Talha'},
+        {age:20, country:'India'},
+        {name:'Talha', lastname:'Talha'},
+    ];
+    for(var a=0; a < student.length;a++)
+    {
+        document.write(student[a].name + " " + student[a].age + "<br>");
+    }
+
+    // const variable use with object
+
+    // const a = [10,20,50];
+    // // a[1] = 25
+    // // a[2] = 30
+   
+    // document.write(a)
+ 
+    // const a = {
+    //     name : 'MD Talna',
+    //     age:25
+    // };
+    // // a.name = "MD Dilkash",
+    // // a = {
+    // //     name: "Arkam",
+    // //     age:34
+    // // };
+    // document.write(a.name)
+
+    // For in loop
+    // var obj = {
+    //      firstname:"MD",
+    //      lastname:"Talha",
+    //      Age:20,
+    //      country:"India"
+    // };
+    // for(var key in obj){
+    //     document.write(key + ":" + obj[key] + "<br>");
+    // }
+
+    // Map Method Object
+
+    // var ary = [11,4,9,16];
+    // var b = ary.map(test);
+    // document.write(b);
+    // function test (x)
+    // {
+    //     return x * 10;
+    // }
+
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

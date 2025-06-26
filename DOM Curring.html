@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // First code to curring
+
+        // function add(a){
+        //     return function (b){
+        //         return function(c) {
+        //             return a + b + c;
+        //         }
+        //     };
+        // }
+        // console.log(add(3)(3)(4));
+
+        // Second code to curring 
+
+        function sendAutoEmail(to) {
+            return function(subject) {
+                return function(body) {
+                    console.log(`Sending Email to ${to} with subject ${subject}: #{body}`);
+                }
+            };
+        }
+        let step1 = sendAutoEmail("arhamguest.gmail.com");
+        let step2 = step1("New Order conform");
+        step2("Here is something for you");
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+        }
+
+        :root {
+            --bg-color: #000;
+            --snd-bg-color: #111;
+            --text-color: #befff2;
+            --main-color: #16ff00;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem 9%;
+            background: var(--bg-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 3rem;
+            color: #16ff00;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .logo:hover{
+            color: #16ff00;
+            box-shadow: 0 0 45px #16ff00;
+        }
+
+        .navbar a {
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin-left: 4rem;
+            color: #fff;
+            text-transform: capitalize;
+        }
+
+        .navbar a:hover {
+            color: #16ff00;
+        }
+        .checkbtn{
+            font-size:20px;
+            color:#fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">MD <span>Talha</span></a>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <nav class="navbar">
+            <ul>
+                <a href="#home">home</a>
+                <a href="#about">about</a>
+                <a href="#gellery">gellery</a>
+                <a href="#service">service</a>
+                <a href="#contact">contact</a>
+            </ul>
+        </nav>
+
+        <div class="btn">
+            <button>Download</button>
+        </div>
+    </header>
+</body>
+
+</html>

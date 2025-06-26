@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            border: none;
+            outline: none;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        :root {
+            --bg-color: #000;
+            --main-color: #16ff00;
+        }
+
+        .html {
+            font-size: 60%;
+            overflow-x: hidden;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: #16ff00;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            background: rgba(0, 0, 0.1);
+            padding: 1.8rem 7%;
+            backdrop-filter: blur(10px);
+            cursor: pointer;
+            z-index: 1000px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.9rem;
+            font-weight: 700;
+            text-transform: capitalize;
+            color: #fff;
+            transition: 0.3 ease-in-out;
+        }
+
+        span {
+            color: #16ff00;
+            transform: scale(1.2);
+        }
+
+        .navbar a {
+            font-size: 20px;
+            font-weight: 400;
+            text-transform: capitalize;
+            color: #fff;
+            margin-left: 2rem;
+        }
+
+        .navbar a:hover {
+            color: #16ff00;
+        }
+
+        i {
+            color: #fff;
+            font-size: 25px;
+            cursor: pointer;
+            float: right;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 1.5rem 5%;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                padding: 1rem 0;
+                margin-top: 1rem;
+            }
+
+            .navbar a {
+                margin: 1rem 0;
+                display: block;
+                padding-left: 1rem;
+            }
+
+            .bx-menu {
+                display: block;
+                font-size: 2.5rem;
+                color: #16ff00;
+            }
+        }
+        .btn{
+            padding:8px 12px;
+            background-color: #16ff00;
+            border-radius: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .btn a{
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">MD <span>Talha</span></a>
+        <i class="bx bx-menu"></i>
+        <nav class="navbar">
+            <a href="#">home</a>
+            <a href="#">about</a>
+            <a href="#">gellery</a>
+            <a href="#">service</a>
+            <a href="#">contact</a>
+            </nav>
+    </header>
+
+   
+</body>
+<script>
+    const menuIcon = document.querySelector(".bx-menu");
+    const navbar = document.querySelector(".navbar");
+
+    menuIcon.addEventListener("click", () => {
+        navbar.classList.toggle("active");
+    });
+</script>
+</html>

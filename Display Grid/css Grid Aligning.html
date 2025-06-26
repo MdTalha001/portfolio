@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica;
+        }
+
+        h1 {
+            padding: 0 0 0 40px;
+        }
+
+        .containor {
+            background: lightblue;
+            width: 650px;
+            margin: 45px auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 120px);
+            grid-gap: 15px;
+
+           
+            /*align-items: end;*/
+            /*justify-items: end;*/
+        }
+
+        .items1 {
+            background: yellow;
+                }
+
+        .items2 {
+            background: green;
+        }
+
+        .items3 {
+            background: red;
+            grid-row: span 2;
+        }
+
+        .items4 {
+            background: aqua;
+        }
+
+        .items5 {
+            background: mediumblue;
+        }
+
+        .items6 {
+            background: blue;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="containor">
+        <div class="items1">First</div>
+        <div class="items2">Second</div>
+        <div class="items3">Third</div>
+        <div class="items4">Fourth</div>
+        <div class="items5">Fifth</div>
+        <div class="items6">Sixth</div>
+    </div>
+</body>
+
+</html>

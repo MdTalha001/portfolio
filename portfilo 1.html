@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        :root {
+            --bg-color: #080808;
+            --second-bg-color: #131313;
+            --text-color: #fff;
+            --main-color: #0096ff;
+        }
+
+        header {
+            width: 100%;
+            padding: 20px;
+            background-color: #080808;
+            border-bottom: 2px solid #ffffff;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-left: 50px;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link li a {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: capitalize;
+        }
+
+        .nav-link li:nth-child(6) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background: linear-gradient(to right, #f7f5e9, #e0dec9);
+        }
+
+        .nav-link li:nth-child(6) a {
+            color: #131313;
+        }
+
+        /* hero section code */
+
+        .home{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #131313;
+        }
+        .left{
+           display: flex;
+           align-items: center;
+           width: 50%;
+           
+        }
+        .left .content{
+           display: flex;
+           align-items: center;
+           flex-direction: column;
+           gap: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">logo</div>
+            <ul class="nav-link">
+                <li><a href="#">home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">gellery</a></li>
+                <li><a href="#">service</a></li>
+                <li><a href="#">contact</a></li>
+                <li><a href="#">Hire me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- hero section code -->
+
+    <section class="home" id="home">
+        <div class="left">
+            <div class="content">
+                <h1 class="heading"><span>Hi,Myself</span></h1>
+                <h3>I am Forntend <span>Developer</span></h3>
+                <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, atque? Hic,
+                    ratione! Architecto quasi rerum cumque iusto officia aliquam corporis?</p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="imgaes">
+                <img src="/images/user-2.jpg" alt="">
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

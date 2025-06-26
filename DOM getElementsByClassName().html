@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red-color{
+            color:blueviolet;
+        }
+        .underline{
+            text-decoration: underline;
+        }
+    </style>
+    <nav>
+        <p class="paragraph">Welcome To Mywebsite</p>
+        <div class="block">
+        <h4 id="name-block">Hey There,My name is <span  id="username">MD Talha</span></h4>
+        <p class="paragraph">Here is a code for you</p>
+        <pre><code>console.log("Hey There")</code></pre>
+    </div>
+    </nav>
+    <div id="my-container"></div>
+    <button id="clickButton">Click me</button>
+</head>
+<body>
+    <script>
+      const element = document.getElementsByClassName("block");
+      for (let i=0;i<element.length;i++){
+        element.item(i).style.background = "blue";
+      }
+      
+    </script>
+</body>
+</html>

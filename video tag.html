@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .card{
+            width: 350px;
+            height: 600px;
+            background-color: aqua;
+            border-radius: 10px;
+        }
+        .container video{
+            max-width:350px ;
+            min-height: 200px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+     <div class="card">
+        <video src="/images/URL.mp4" controls></video>
+     </div>
+   </div>
+</body>
+</html>

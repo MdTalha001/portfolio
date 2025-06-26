@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  width: 800px;
+  max-width: 95%;
+}
+
+.product-card {
+  display: flex;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.product-img {
+  flex: 1;
+  background: linear-gradient(to bottom, #f53b57, #ff6b6b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+
+.product-img img {
+  max-width: 100%;
+  height: auto;
+  transform: rotate(-15deg);
+}
+
+.product-details {
+  flex: 1;
+  padding: 30px;
+}
+
+.stars {
+  color: gold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.price {
+  float: right;
+  font-size: 20px;
+  color: #333;
+}
+
+h2 {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.selection {
+  margin: 20px 0 10px;
+}
+
+.colors {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.color.purple { background: #d4a5ff; }
+.color.pink { background: #ff8edb; }
+.color.red { background: #ff4747; }
+.color.yellow { background: #ffeb3b; }
+.color.green { background: #4caf50; }
+
+.color.selected {
+  border: 2px solid #333;
+}
+
+.sizes {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.sizes span {
+  padding: 5px 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.sizes .selected {
+  background: #f53b57;
+  color: white;
+  border-color: transparent;
+}
+
+.btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #ff5f6d, #ffc371);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.wishlist {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  color: #555;
+  text-decoration: underline;
+}

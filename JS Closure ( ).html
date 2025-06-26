@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="my-name" style="font-size:50px;">MD Talha</h1>
+    <button id="my-btn">click me</button>
+    <script>
+        // First Method use to clouser
+
+        // function main(name){
+        //     // const name = "MD Talha";
+
+        // function say(){
+        //     console.log(name);
+        // }
+        // return say;
+        // }
+        // let fn = main('Talha');
+        // fn();
+        // fn();
+        // fn();
+
+        function createLocker(password) {
+            // Yeh private variable hai
+            let storedPassword = password;
+
+            // Inner functions return ho rahe hain
+            return {
+                checkPassword: function (entered) {
+                    if (entered === storedPassword) {
+                        return "Access Granted!";
+                    } else {
+                        return "Access Denied!";
+                    }
+                },
+                changePassword: function (oldPass, newPass) {
+                    if (oldPass === storedPassword) {
+                        storedPassword = newPass;
+                        return "Password Changed Successfully!";
+                    } else {
+                        return "Wrong Old Password!";
+                    }
+                }
+            };
+        }
+
+        //Locker banaya
+        let locker = createLocker("mySecret123");
+
+        console.log(locker.checkPassword("wrongPass"));    // ❌ Access Denied!
+        console.log(locker.checkPassword("mySecret123"));  // ✅ Access Granted!
+
+        console.log(locker.changePassword("mySecret123", "newPass456")); // ✅ Password Changed
+        console.log(locker.checkPassword("newPass456"));   // ✅ Access Granted!
+
+    </script>
+</body>
+
+</html>

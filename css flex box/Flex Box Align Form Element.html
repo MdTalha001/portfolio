@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial;
+        }
+        h1{
+            padding: 0 0 0 40px;
+        }
+        #Talha{
+            background-color: #eee;
+            list-style: none;
+            margin: 50px;
+            padding: 20px;
+        }
+        #Talha li{
+            display: flex;
+            padding: 5px 0;
+            justify-content: flex-end;
+            transition: .4s ease;
+        }
+        #Talha li:hover{
+            color:green;
+        }
+
+        #Talha li label{
+            flex: 1;
+        }
+        #Talha li input{
+            flex: 3;
+        }
+        @media screen and (min-width: 300px) and (max-width:499px){
+            #Talha li{
+                flex-direction: column;
+            }
+            #Talha li input{
+                    flex: 3;
+            }
+        }
+        @media screen and (min-width: 500px){
+            #Talha li input{
+                flex: 3;
+            }
+        }
+        @media screen and (min-width: 768px){
+            #Talha li input{
+                flex: 4;
+            }
+        }
+        @media screen and (min-width: 992px){
+            #Talha li input{
+                flex: 6;
+            }
+        }
+        
+        @media screen and (min-width: 1200px){
+            #Talha li input{
+                flex: 8;
+            }
+        }
+        
+       
+            
+    </style>
+</head>
+<body>
+    <form action="">
+        <ul id="Talha">
+            <li>
+                <label for="">Name</label>
+                <input type="text" placeholder="Enter Your Name">
+            </li>
+            <li>
+                <label for="">Class</label>
+                <input type="text" placeholder="Enter Your Class">
+            </li>
+            <li>
+                <label for="">Email</label>
+                <input type="email" placeholder="Enter Your Email">
+            </li>
+            <li>
+                <button type="submit">save</button>
+            </li>
+        </ul>
+    </form>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .section{
+            margin:0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slider{
+            width: 800px;
+            height: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .slide{
+            width:500%;
+            height:500px;
+            display:flex;
+        }
+        .slide input{
+            display:none;
+        }
+        .st{
+            width:20%;
+            transition:2s;
+        }
+        .st img{
+            width: 800px;
+            height: 500px;
+        }
+        .nav-m{
+            position:absolute;
+            width: 800px;
+            margin-top: -40px;
+            justify-content: center;
+            display: flex;
+        }
+        .m-btn{
+           border: 2px solid #23e3c2;
+           padding:5px;
+           border-radius: 5px;
+           cursor:pointer;
+           transition:1s;
+        }
+        .m-btn:not(:last-child){
+            margin-right: 30px;
+        }
+        .m-btn:hover{
+            background-color: #23e3c2;
+        }
+        #radio1:checked ~ .first{
+           margin-left: 0px;
+        }
+        #radio2:checked ~ .first{
+           margin-left: -20%;
+        }
+        #radio3:checked ~ .first{
+           margin-left: -40%;
+        }
+        #radio4:checked ~ .first{
+           margin-left: -60%;
+        }
+        #radio5:checked ~ .first{
+           margin-left: -80%;
+        }
+        .nav-auto{
+            position: absolute;
+            width: 800px;
+            margin-top: 400px;
+            display: flex;
+            justify-content: center;
+        }
+        .nav-auto div{
+            border: 2px solid #23e3c2;
+            padding:5px;
+            border-radius: 10px;
+            transition: 1s;
+        }
+        .nav-auto div:not(:last-child){
+            margin-right: 30px;
+            justify-content: center;
+        }
+        #radio1:checked ~ .nav-auto .a-b1{
+            background-color: #23e3c2;
+        }
+        #radio1:checked ~ .nav-auto .a-b2{
+            background-color: #23e3c2;
+        }
+        #radio1:checked ~ .nav-auto .a-b3{
+            background-color: #23e3c2;
+        }
+        #radio1:checked ~ .nav-auto .a-b4{
+            background-color: #23e3c2;
+        }
+        #radio1:checked ~ .nav-auto .a-b5{
+            background-color: #23e3c2;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="section">
+        <div class="slider">
+            <div class="slide">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <input type="radio" name="radio-btn" id="radio5">
+
+                <div class="st first">
+                    <img src="../images/design.jpg" alt="">
+                </div>
+
+                <div class="st">
+                    <img src="../images/development.jpg" alt="">
+                </div>
+
+                <div class="st">
+                    <img src="../images/Editor.jpg" alt="">
+                </div>
+
+                <div class="st">
+                    <img src="../images/productivity.jpg" alt="">
+                </div>
+
+                <div class="st">
+                    <img src="../images/coder.jpg" alt="">
+                </div>
+
+
+                <div class="nav-auto">
+                    <div class="a-b1"></div>
+                    <div class="a-b2"></div>
+                    <div class="a-b3"></div>
+                    <div class="a-b4"></div>
+                    <div class="a-b5"></div>
+                </div>
+            </div>
+
+            <div class="nav-m">
+                <div class="m-btn" onclick="goToSlide(1)"></div>
+                <div class="m-btn" onclick="goToSlide(2)"></div>
+                <div class="m-btn" onclick="goToSlide(3)"></div>
+                <div class="m-btn" onclick="goToSlide(4)"></div>
+                <div class="m-btn" onclick="goToSlide(5)"></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+       function goToSlide(slideNumber){
+        const radio = document.getElementById(`radio${slideNumber}`);
+        if(radio){
+            radio.checked = true;
+        }
+       }
+    </script>
+</body>
+</html>

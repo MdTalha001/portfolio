@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: rgb(232, 238, 238);
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 30px;
+        }
+
+        .input-container {
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .input-container input {
+            border: none;
+            outline: none;
+            padding: 12px;
+            margin-block: 12px;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .input-container input[type="text"] {
+            width: 70%;
+        }
+
+        .input-container input[type="button"] {
+            background-color: #3da33d;
+            color: #fff;
+            font-weight: 700;
+            margin-left: 8px;
+            cursor: pointer;
+            padding: 12px 24px;
+        }
+
+        .input-container input[type="button"]:hover {
+            background-color: #60b160;
+        }
+
+        ul {
+            width: 100%;
+            max-width: 450px;
+            /*display:flex;
+          align-items:center;
+          justify-content:center;
+          flex-direction:column;*/
+        }
+
+        ul li {
+            list-style: none;
+            cursor: pointer;
+            margin-block-end: 12px;
+            border-radius: 8px;
+            padding: 6px 12px;
+            border-color: #ffffff;
+            border: 0.125px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: back 0.5s;
+        }
+
+        ul li:hover {
+            background: #cbcaca;
+        }
+
+        ul li p {
+            flex-grow: 1;
+            padding: 2px;
+        }
+
+        .btn {
+            border: none;
+            outline: none;
+            font-size: 16px;
+            font-weight: 600;
+            background-color: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .deletebtn {
+            color: #ff0000;
+        }
+
+        .Editbtn {
+            color: #008000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="input-container">
+            <h1>MY To Do List</h1>
+            <input type="text" placeholder="Add a new to do.." id="inputbox">
+            <input type="button" value="Add" id="addbtn">
+        </div>
+        <ul class="todoList" id="todoList">
+            <!-- <li>Task1</li>
+           <li>Task2</li>
+           <li>Task3</li>
+           <li>Task4</li> -->
+        </ul>
+    </div>
+</body>
+<script>
+    const inputbox = document.getElementById('inputbox');
+    const addbtn = document.getElementById('addbtn');
+    const todoList = document.getElementById('todoList');
+
+    const Edittodo = null;
+    const addtodo = () => {
+        const inputText = inputbox.value.trim();
+        if (inputText.lenght <= 0) {
+            alert("You mast right something in your to do");
+            return false;
+        }
+         if (addbtn.value === "Edit") {
+             Edittodo.target.previousElementSibling.innerHTML = inputText;
+             addbtn.value = "Add";
+             inputbox.value = "";
+         }
+         else {
+            // creating p in li tag
+            const li = document.createElement("li");
+            const p = document.createElement("p");
+            p.innerHTML = inputText;
+            li.appendChild(p);
+
+              // creating Edit Btn
+             const Editbtn = document.createElement("button");
+             Editbtn.innerText = "Edit";
+             Editbtn.classList.add("btn", "Editbtn");
+             li.appendChild(Editbtn);
+
+            // // creating delete Btn
+            const deletebtn = document.createElement("button");
+            deletebtn.innerText = "Remove";
+            deletebtn.classList.add("btn", "deletebtn");
+            li.appendChild(deletebtn);
+
+
+            todoList.appendChild(li);
+            inputbox.value = " ";
+
+            // saveLocalTodos(inputText);
+        }
+    }
+
+    // Function to update : Edit/Delete todo
+
+    addbtn.addEventListener('click', addtodo);
+
+    // consto addTodo = ()=>{
+
+    // }
+
+
+     const updateTodo = (e) => {
+         //   console.log(e.target.innerHTML)
+         if (e.target.innerHTML === "Remove") {
+             todoList.removeChild(e.target.parentElement);
+         }
+         if (e.target.innerHTML === "Edit") {
+             inputbox.value = e.target.previousElementSibling.innerHTML;
+             inputbox.focus();
+             addbtn.value = "Edit";
+             Edittodo = e;
+         }
+     }
+
+    // //  Save localStorage code and function
+
+    // const saveLocalTodos = (todo) => {
+    //     let todos;
+    //     if (localStorage.getItem("todos") === null) {
+    //         todos = [];
+    //     }
+    //     else {
+    //         todos = JSON.parse(localStorage.getItem("todos"));
+    //     }
+
+    //     todos.push(todo);
+    //     localStorage.setItem("todos", JSON.stringify(todos));
+    //     // console.log(todos);
+    // }
+
+    // // Get localStorage code and function
+
+    // const getlocalTodos = () => {
+    //     let todos;
+    //     if (localStorage.getItem("todos") === null) {
+    //         todos = [];
+    //     }
+    //     else {
+    //         todos = JSON.parse(localStorage.getItem("todos"));
+    //         todos.forEach(todo => {
+    //             const li = document.createElement("li");
+    //             const p = document.createElement("p");
+    //             p.innerHTML = todo;
+    //             li.appendChild(p);
+
+    //             //  // creating Edit Btn
+    //             const Editbtn = document.createElement("button");
+    //             Editbtn.innerText = "Edit";
+    //             Editbtn.classList.add("btn", "Editbtn");
+    //             li.appendChild(Editbtn);
+
+    //             // creating delete Btn
+    //             const deletebtn = document.createElement("button");
+    //             deletebtn.innerText = "Remove";
+    //             deletebtn.classList.add("btn", "deletebtn");
+    //             li.appendChild(deletebtn);
+
+
+    //             todoList.appendChild(li);
+    //         });
+    //     }
+    // }
+
+    // Delete localStorage code after leload from browser
+
+    // const deleteLocalTodos = () =>{
+    //     let todos;
+    //     if (localStorage.getItem("todos") === null) {
+    //         todos = [];
+    //     }
+    //     else{
+    //         todos = JSON.parse(localStorage.getItem("todos"));
+    //     }
+    //     let todoText = todoText.children[0].innerHTML;
+    //     let todoIndex = todos.indexOf(todoText);
+    //     todos.splice(todoIndex,1);
+    //     localStorage.setItem("todos",JSON.stringify(todos));
+        
+    // }
+    addbtn.addEventListener('click',updateTodo);
+    addbtn.addEventListener('click', addtodo);
+    
+</script>
+
+</html>

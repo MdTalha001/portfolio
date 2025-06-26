@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const compose = (f,g,h) => X => f(g(h(x)));
+        let talha = compose(square, add10, multiplay2)
+        console.log(talha(5));
+    </script>
+</body>
+</html>

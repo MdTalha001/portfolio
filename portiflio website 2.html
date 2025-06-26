@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: black;
+            color:#fff;
+        }
+        header{
+            display:flex;
+            justify-content:space-between;
+            align-items: center;
+            padding: 10px;
+            box-shadow: 0 0 10px white;
+        }
+        .navbar ul{
+            display:flex;
+            align-items: center;
+            gap:30px;
+            list-style:none;
+        }
+        
+        .navbar ul li a{
+            text-decoration:none;
+            color:#fff;
+            text-transform:capitalize;
+            cursor:pointer;
+        }
+        .logo{
+            color:#fff;
+            font-size:30px;
+            font-weight:bold;
+            text-transform:uppercase;
+            
+        }
+        .navbar ul li a:hover{
+            color: #ff6347;
+            text-decoration: underline;
+            
+        }
+        header .button {
+            margin-right: 20px;
+        }
+        .button .btn{
+            width:100px;
+            padding:10px;
+            border-radius:8px;
+            color:black;
+            font-size:18px;
+            font-weight:bold;
+            background-color: yellow;
+            border:2px solid #fff;
+            transition:0.5s ease;
+            cursor:pointer;
+        }
+        .button .btn:hover{
+            scale:1.1;
+            box-shadow:0 22px 30px #fff; 
+        }
+        .hero{
+            margin-top: 150px;
+            margin-left:100px;
+        }
+        .hero span{
+            color:yellow;
+            
+        }
+        .hero h1{
+            font-size:20px;
+            font-weight:bold;
+        }
+        .hero h2{
+            font-size:40px;
+            font-weight:bold;
+        }
+        .icon{
+            display:flex;
+            align-items:center;
+            gap:23px;
+            margin-top:18px;
+        }
+        .icon .social-media{
+            display:flex;
+            align-items:center;
+            gap:24px;
+        }
+        .social-media li{
+            width:40px;
+            height:40px;
+            border:1.7px solid #fff;
+            outline:none;
+            background-color:transparent;
+            font-size:23px;
+            border-radius:50%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            cursor:pointer;
+            transition: .5s;
+        }
+        .icon .social-media li:hover{
+            scale:1.1;
+            box-shadow:0 22px 30px yellowgreen;
+        }
+        .icon .cv{
+            width:160px;
+            padding:10px;
+            border:1.1 #fff;
+            background-color: yellow;
+            color:#000;
+            font-size:22px;
+            font-weight:bold;
+            outline:none;
+            border-radius:10px;
+            cursor:pointer;
+            transition: .5s;
+        }
+        .cv:hover{
+            scale:1.1;
+            box-shadow:0 22px 30px blue;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">MD Talha</div>
+        <div class="navbar">
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">gellery</a></li>
+                <li><a href="#">works</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </div>
+        <div class="button">
+            <button class="btn">Hire me</button>
+        </div>
+    </header>
+
+    
+    <div class="hero">
+        <h3>Hello, I'Am</h3>
+            <h1>MD TALHA</h1>
+            <h2>I'am A Fronted Developer <span>Engineer</span></h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br>Illum sunt inventore, possimus, nemo placeat
+                consequatur numquam voluptat<br>
+                a non itaque corporis qui nesciunt eius quasi.
+                 Ad itaque odit natus deleniti porro soluta doloremque
+                minima ratione,
+                iste ipsum,<br>voluptates maiores ut reiciendis esse corporis quis temporibus! Iure laborum fugiat error
+                reiciendis.</p>
+                <div class="icon">
+                    <div class="social-media">
+                        <li><i class="fa-brands fa-github"></i></li>
+                        <li><i class="fa-brands fa-linkedin-in"></i></li>
+                        <li><i class="fa-brands fa-twitter"></i></li>
+                        <li><i class="fa-brands fa-facebook-f"></i></li>
+                    </div>
+                    <div class="cv">Download cv</div>
+                </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

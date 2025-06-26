@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 350px;
+            height: 250px;
+            background-color: #5e6fcd;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2{
+            text-align: center;
+            padding-top: 15px;
+            text-transform: uppercase;
+        }
+        lable,input{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding:8px 12px;
+            margin:4px;
+        }
+        input{
+            border-radius: 8px;
+            border: 2px solid black;
+
+        }
+        #result{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            color: blue;
+            padding:6px 10px;
+            border-radius: 6px;
+            font-size: 17px;
+            font-weight: 600;
+        }
+        button{
+            /* display: flex;
+            justify-content: center;
+            align-items: center;  */
+            text-align: center;
+            padding:8px 12px;
+            border:2px solid black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Addition</h2>
+        <label>Enter The Number</label></br>
+        <input type="number" id="Num1" placeholder="Enter The First Number"></br>
+
+        <label>Enter The Number</label></br>
+        <input type="number" id="Num2" placeholder="Enter The First Number">
+
+        <button onclick="add()">Add</button>
+
+        <p ="result"></p>
+    </div>
+
+    <script>
+        function add(){
+            let n1 = parseFloat(document.getElementById('num1').value);
+            let n2 = parseFloat(document.getElementById('num2').value);
+            let sum = n1 + n2;
+            document.getElementById("result").innerText = "result:" + sum;
+           
+
+        }
+
+    </script>
+</body>
+
+</html>

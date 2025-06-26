@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Poppins",sans-serif;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        .input-container{
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            padding: 20px;
+        }
+        .input-container input{
+            border:none;
+            outline:none;
+            padding:20px;
+            margin-block: 12px;
+            border-radius:6px;
+            background-color: aqua;
+            font-size:16px;
+        }
+        .input-container input[type='text']{
+            width: 70%;
+        }
+        .input-container input[type='button']{
+            background-color: blueviolet;
+            color:#fff;
+        }
+        ul{
+            width: 100%;
+            max-width: 450px;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            flex-direction: column;
+        }
+        ul li{
+            list-style: none;
+            cursor: pointer;
+            border:0.125px solid black;
+            border-radius: 8px;
+            background: #fff;
+            padding:6px 12px;
+            display: flex;
+            margin-block-end: 12px;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ;
+        }
+        ul li:hover{
+            background-color: #8ea9e8;
+        }
+        ul li p{
+            flex-grow: 1;
+            padding: 2px;
+        }
+        .btn{
+            border:none;
+            outline:none;
+            font-size: 16px;
+            background-color: none;
+            font-weight: 600;
+            padding: 8px;
+        }
+        .deletebtn{
+            color:#ff0000;
+        }
+        .Editbtn{
+            color:#008000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="input-container">
+            <h1>MY To Do List</h1>
+            <input type="text" placeholder="Add a new to do.." id="inputbox">
+            <input type="button" value="Add" id="addbtn">
+        </div>
+        <ul class="todoList" id="todoList">
+            <!-- <li>Task1</li>
+           <li>Task2</li>
+           <li>Task3</li>
+           <li>Task4</li> -->
+        </ul>
+    </div>
+
+    <script>
+        const inputbox = document.getElementById('inputbox');
+        const addbtn = document.getElementById('addbtn');
+        const todoList = document.getElementById('todoList');
+        
+        let edittodo = null;
+
+        const addtodo = () => {
+        const inputText = inputbox.value.trim();
+        if (inputText.lenght <= 0) {
+            alert("You mast right something in your to do");
+            return false;
+        }
+        if(addbtn.value === "Edit"){
+            edittodo.target.previousElementSibling.innerHTML = inputText;
+            addbtn.value = "Add";
+        }
+        else {
+            // creating p in li tag
+            const li = document.createElement("li");
+            const p = document.createElement("p");
+            p.innerHTML = inputText;
+            li.appendChild(p);
+
+             // creating a Edit btn
+            const Editbtn = document.createElement("button");
+            Editbtn.innerText = "Edit";
+            Editbtn.classList.add("btn","Editbtn");
+            li.appendChild(Editbtn);
+
+            // creating a delete btn
+            const deletebtn = document.createElement("button");
+            deletebtn.innerText = "Remove";
+            deletebtn.classList.add("btn","deletebtn");
+            li.appendChild(deletebtn);
+
+            todoList.appendChild(li);
+            inputbox.value = "";
+
+            savelocalTodos(inputText);
+        }
+    }
+    const update = (e)=>{
+        if(e.target.innerHTML === "Remove"){
+            todoList.removeChild(e.target.parentElement);
+        }
+        if(e.target.innerHTML === "Edit"){
+            inputbox.value = e.target.previousElementSibling.innerHTML;
+            inputbox.focus();
+            addbtn.value="Edit";
+            edittodo = e;
+        }
+    }
+    const savelocalTodos = (todo) =>{
+        let todos;
+        if(localStorage.getItem("todos") === null){
+            todos = [];
+        }
+        else{
+            todos = JSON.parse(localStorage.getItem("todos"));
+        }
+        todos.push(todo);
+        localStorage.setItem("todos",JSON.stringify(todos));
+
+    }
+    const getlocalTodos = ()=>{
+        let todos;
+        if(localStorage.getItem("todos") === null){
+            todos = [];
+        }
+        else{
+            todos = JSON.parse(localStorage.getItem("todos"));
+            todos.forEach(todo => {
+            
+            // creating p in li tag
+            const li = document.createElement("li");
+            const p = document.createElement("p");
+            p.innerHTML = todo;
+            li.appendChild(p);
+
+             // creating a Edit btn
+            const Editbtn = document.createElement("button");
+            Editbtn.innerText = "Edit";
+            Editbtn.classList.add("btn","Editbtn");
+            li.appendChild(Editbtn);
+
+            // creating a delete btn
+            const deletebtn = document.createElement("button");
+            deletebtn.innerText = "Remove";
+            deletebtn.classList.add("btn","deletebtn");
+            li.appendChild(deletebtn);
+
+            todoList.appendChild(li);
+            });
+        }
+        todos.push(todo);
+        localStorage.setItem("todos",JSON.stringify(todos));
+    }
+    const deletelocalTodos = ()=>{
+           
+    }        
+       
+    
+    addbtn.addEventListener('click', addtodo);
+    todoList.addEventListener('click',update);
+    document.addEventListener("DOMContentLoaded",getlocalTodos);
+
+       
+    </script>
+</body>
+
+</html>

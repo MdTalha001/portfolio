@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    max-height: 100vh;
+    background: #ccc;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+
+}
+
+.logo img {
+    width: 80px;
+    color: red;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+.navbar {
+    display: flex;
+    list-style: none;
+    margin-top: -40px;
+}
+
+.navbar a {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-left: 40px;
+    text-decoration: none;
+    text-transform: capitalize;
+
+}
+
+.navbar a:hover {
+    color: blue;
+
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 180px;
+    margin-left: -100px;
+}
+
+.home-content h3 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 10px;
+}
+
+.home-content h3:first-child {
+    margin-bottom: 10px;
+}
+
+.home-content h1 {
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.home-content .multiple {
+    color: green;
+}
+
+.home-content p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.social-media a{
+    display: inline-flex;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3 ease-in-out;
+    margin-left: 40px;
+    color: red;
+    background: transparent;
+    border: 2px solid black;
+}
+
+.home-img img {
+    width: 20vw;
+    animation: floatImage 3s ease-in-out infinite;
+    border: 3px solid black;
+    margin-left: 40px;
+    border-radius: 50%;
+}
+
+.home-img img:hover {
+    box-shadow: 0 0 1.8rem black;
+    transition: 0.2s ease;
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2.4rem);
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typed JS Example</title>
+
+  <!-- ✅ Typed.js correctly loaded -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: black;
+      color: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .auto {
+      color: #fff724;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>I’m a <span class="auto"></span></h1>
+
+  <!-- ✅ After CDN -->
+  <script>
+    var typed = new Typed(".auto", {
+      strings: ["Frontend Developer", "Coder", "UX/UI Designer", "Youtuber"],
+      typeSpeed: 50,
+      backSpeed: 25,
+      loop: true
+    });
+  </script>
+
+</body>
+</html>

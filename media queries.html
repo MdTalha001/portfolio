@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .main {
+            width: 100%;
+            height: 450px;
+            /* background: green; */
+        }
+
+        .main h1 {
+            font-size: 40px;
+            color: black;
+            text-align: center;
+            padding: 10px 20px;
+        }
+
+        .main .text,
+        .img {
+            width: 50%;
+            height: 400px;
+            /* background: aqua; */
+            float: left;
+            border: 1px solid #941515
+        }
+        .text p{
+            font-size:30px;
+            padding:30px;
+            text-align: justify;
+        }
+        .img img{
+            width:100%;
+            height: 399px;
+            padding:20px;
+        }
+        @media (max-width: 786px){
+            .main h1{
+                color:blue;
+            }
+            .text p{
+               font-size:20px;
+            }
+            .img img{
+                width: 100%;
+                height: 350px;
+            }
+        }
+
+        @media (max-width: 480px){
+            .main h1{
+                color:yellowgreen;
+                font-size:32px;
+            }
+            .text p{
+               font-size:18px;
+            }
+            .main .text, .img{
+                width: 100%;
+            }
+            .main .text{
+                height: auto;
+            }
+            .main .img img{
+               height: auto;
+            }
+            .main img{
+                height: auto;
+            }
+            
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>css media queries</h1>
+        <div class="text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus consectetur saepe, neque praesentium
+                incidunt hic voluptates expedita quae? Iusto, quisquam debitis eaque error officia facilis quidem
+                impedit, praesentium maxime nemo, voluptates sit tenetur. Autem architecto laborum non sunt
+                exercitationem eius, hic veritatis, eum molestias recusandae nihil mollitia at accusantium illum soluta
+                porro accusamus expedita, tempore cum aspernatur quod perferendis iure.</p>
+        </div>
+        <div class="img">
+             <img src="./images/coder.jpg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

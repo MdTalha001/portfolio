@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica;
+        }
+        .base{
+            width: 350px;
+            height: 250px;
+            background: grey;
+            font-size: 30px;
+            text-align: center;
+            margin:100px 0 0 100px;
+        }
+        #box{
+            width: 350px;
+            height: 250px;
+            background: blueviolet;
+            /*transform-origin: left right;*/
+            transform:perspective(800px) rotateY(60deg) translate(300px);
+        }
+    </style>
+</head>
+<body>
+    <div class="base">
+        <div id="box">Talha</div>
+    </div>
+</body>
+</html>

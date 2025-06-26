@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Password Locker</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    input {
+      margin: 5px;
+      padding: 6px;
+    }
+    button {
+      padding: 6px 12px;
+      margin: 5px;
+    }
+    #message {
+      margin-top: 15px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Password Locker (with Closure)</h2>
+
+  <div>
+    <label>Set Password: </label><br>
+    <input type="password" id="setPass"><br>
+    <button onclick="setLocker()">Create Locker</button><br>
+  </div>
+
+  <div>
+    <label>Check Password: </label><br>
+    <input type="password" id="checkPass"><br>
+    <button onclick="check()">Check</button><br><br>
+  </div>
+
+  <div>
+    <label>Old Password: </label><br>
+    <input type="password" id="oldPass"><br>
+    <label>New Password: </label><br>
+    <input type="password" id="newPass"><br>
+    <button onclick="change()">Change Password</button>
+  </div>
+
+  <div id="message"></div>
+
+  <script>
+    let locker = null;
+
+    function createLocker(password) {
+      let storedPassword = password;
+
+      return {
+        checkPassword: function (entered) {
+          if (entered === storedPassword) {
+            return "Access Granted!";
+          } else {
+            return "Access Denied!";
+          }
+        },
+        changePassword: function (oldPass, newPass) {
+          if (oldPass === storedPassword) {
+            storedPassword = newPass;
+            return "Password Changed Successfully!";
+          } else {
+            return "Wrong Old Password!";
+          }
+        }
+      };
+    }
+
+    function setLocker() {
+      let pass = document.getElementById("setPass").value;
+      locker = createLocker(pass);
+      showMessage("Locker Created Successfully!");
+    }
+
+    function check() {
+      let pass = document.getElementById("checkPass").value;
+      if (!locker) {
+        showMessage("Please create the locker first.");
+        return;
+      }
+      showMessage(locker.checkPassword(pass));
+    }
+
+    function change() {
+      let oldPass = document.getElementById("oldPass").value;
+      let newPass = document.getElementById("newPass").value;
+      if (!locker) {
+        showMessage("Please create the locker first.");
+        return;
+      }
+      showMessage(locker.changePassword(oldPass, newPass));
+    }
+
+    function showMessage(msg) {
+      document.getElementById("message").textContent = msg;
+    }
+  </script>
+
+</body>
+</html>

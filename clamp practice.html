@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: white;
+            font-family: "Poppins",sans-serif;
+        }
+        .container{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding:2rem;
+        }
+        .hero-content{
+            text-align: center;
+            width: clamp(300px,80%,800px);
+            background-color: black;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 0 20 rgb(0, 0,0,0.1);
+        }
+        .hero-content h2{
+            font-size: clamp(1.5rem,5vw,2.5rem);
+            color:white;
+        }
+        .hero-content img{
+            width: clamp(100px,60%,300px);
+            border-radius: 50%;
+            padding: 10px;
+            object-fit: cover;
+        }
+        .hero-content p{
+            margin:1rem 0;
+            font-size: clamp(1rem,2.5vw,1.5rem);
+            color:aqua;
+        }
+        .hero-content .btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn .btn1{
+            padding:0.8rem 1.5rem;
+            font-size: 1rem;
+            background-color: #007bff;
+            color:#fff;
+            border: 2px solid white;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            width: min(200px,50%);
+            transition: all 0.5s ease-in-out;
+        }
+        .btn .btn2{
+            padding:0.8rem 1.5rem;
+            font-size: 1rem;
+            background-color: #007bff;
+            color:#fff;
+            border: 2px solid white;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            width: min(200px,50%);
+            transition: all 0.5s ease-in-out;
+        }
+        .btn1:hover{
+            color: black;
+            box-shadow: 0 0 45px #16ff00;
+        }
+        .btn2:hover{
+            color: black;
+            box-shadow: 0 0 45px #16ff00;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <div class="hero-content">
+            <h2>Welcome to MY Youtube channel</h2>
+            <img src="/images/Talha 2.png" alt="Talha">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam fugiat ab expedita voluptatem eligendi
+                velit quis quam minus odio, officia praesentium quod. Nihil illum vel consectetur.</p>
+            <div class="btn">
+                <button class="btn1">Downoad</button>
+                <button class="btn2">Hire me</button>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

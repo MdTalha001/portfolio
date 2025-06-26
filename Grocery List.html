@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let groceryList = [];
+
+        // Add Item Function
+
+        function AddItem(item){
+            groceryList.push(item);
+            console.log(`\u2705 '${item}' added to grocery list.`)
+        }
+
+        // show all items
+
+        function showItem(){
+            console.log("Your Grocery List.");
+            groceryList.map((item,i) =>{
+                console.log(`${i + 1} .${item}`);
+            });
+        }
+
+        // Remove Item By Index
+
+        function removeItem(index){
+            if(index >= 0 && index < groceryList.length){
+                let removed = groceryList.splice(index,1);
+                console.log(`${removed} `)
+            }
+            else{
+                console.log(`Invalid item number.`);
+            }
+        }
+
+        // serch item by Name
+
+        function searchItem(keyword){
+            let result = groceryList.filter(item => item.toLowerCase().includes(keyword.toLowerCase))
+            console.log("Search Results:");
+            result.forEach(i => console.log("- " + i));
+        }
+
+        // Check Items Exists
+
+        function checkItem(item) {
+            if(groceryList.includes(item)){
+                console.log(` '${item}' is in the list.`);
+            }
+            else{
+                console.log(`'${item}' not found the list.`);
+            }
+        }
+
+        AddItem("Milk");
+        AddItem("Eggs");
+        AddItem("Rice");
+
+        showItem();
+
+        removeItem(1);
+
+        showItem();
+
+        searchItem("mi")
+
+        checkItem("Rice");
+        checkItem("Oil");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #f0f0f0;
+            font-family:Helvetica, sans-serif;
+            width: 100%;
+            overflow-x: hidden;
+            min-height: 250vh;
+        }
+        .container{
+            max-width: 1100px;
+            margin: 10px auto;
+        }
+        .container .row{
+            display: grid;
+            grid-template-columns: 1fr 3px 1fr;
+            grid-column-gap:20px ;
+            padding:0px 20px;
+        }
+        .row .line{
+            position: relative;
+            background-color: #fd5800;
+        }
+        .container time{
+            position: relative;
+            display: inline-block;
+            padding:5px 12px;
+            margin-bottom: 20px;
+            background-color: #fd5800;
+            color:#fff;
+        }
+        .container time::before{
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 3px;
+            background-color: #fd5800;
+            right: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .content .description{
+            position: relative;
+            background-color: #fff;
+            padding:15px 20px;
+            border-left: 5px solid #fd5800;
+            border-radius: 10px;
+            box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.55);
+        }
+        .container .description::before{
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: -10px;
+            left: 20px;
+            background-color: #fd5800;
+            clip-path: polygon(0% 50%,50% 0%,100% 50%,0% 50%);
+        }
+        .description h3{
+            color: #222;
+            margin-bottom: 2px;
+        }
+        .description p{
+            color: #444;
+            line-height: 1.4;
+        }
+        .row .emty-col{
+            grid-area: empty-column;
+        }
+        .row .line{
+            grid-area: the_line;
+        }
+        .row .content{
+            grid-area: the_content;
+            padding:10px 0px;
+        }
+        .row:nth-child(odd){
+            grid-template-areas: 'empty-column the_line the_content';
+        }
+        .row:nth-child(even){
+            grid-template-areas: 'the_content the_line empty-column';
+            text-align: right;
+        }
+        .row:nth-child(even) time::before{
+              right: initial;
+              left: 100%;
+        }
+        .row:nth-child(even) .description::before{
+            left: initial;
+            right: 20px;
+        }
+        .row:nth-child(even) .description{
+            text-align: left;
+        }
+        .row .line .circle{
+            content: '';
+            position: absolute;
+            width: 17px;
+            height: 17px;
+            background-color: #f0f0f0;
+            border: 3px solid #fd5800;
+            border-radius: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .row:nth-child(odd) .description{
+            transform: translateX(150px);
+            transition: all 0.5s;
+            opacity: 0;
+        }
+        .row:nth-child(even) .description{
+            transform: translateX(-150px);
+            transition: all 0.5s;
+            opacity: 0;
+        }
+        .row:nth-child(odd) .show{
+            transform: translateX(0);
+            opacity: 1;
+        }
+        .row:nth-child(even) .show{
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <section class="emty-col"></section>
+            <section class="line">
+                <span class="circle end"></span>
+             </section>
+            <section class="content">
+                <time>Jan 2022</time>
+                <div class="description">
+                    <h3>some tittle</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur minus optio eos fugiat fuga
+                        sequi ad porro molestias suscipit? Inventore.</p>
+                </div>
+            </section>
+
+        </div>
+
+        <div class="row">
+            <section class="emty-col"></section>
+            <section class="line"></section>
+            <section class="content">
+                <time>Jan 2022</time>
+                <div class="description">
+                    <h3>some tittle</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur minus optio eos fugiat fuga
+                        sequi ad porro molestias suscipit? Inventore.</p>
+                </div>
+            </section>
+
+        </div>
+
+
+        <div class="row">
+            <section class="emty-col"></section>
+            <section class="line"></section>
+            <section class="content">
+                <time>Jan 2022</time>
+                <div class="description">
+                    <h3>some tittle</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur minus optio eos fugiat fuga
+                        sequi ad porro molestias suscipit? Inventore.</p>
+                </div>
+            </section>
+
+        </div>
+
+
+        <div class="row">
+            <section class="emty-col"></section>
+            <section class="line"></section>
+            <section class="content">
+                <time>Jan 2022</time>
+                <div class="description">
+                    <h3>some tittle</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur minus optio eos fugiat fuga
+                        sequi ad porro molestias suscipit? Inventore.</p>
+                </div>
+            </section>
+
+        </div>
+
+
+        <div class="row">
+            <section class="emty-col"></section>
+            <section class="line"></section>
+            <section class="content">
+                <time>Jan 2022</time>
+                <div class="description">
+                    <h3>some tittle</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur minus optio eos fugiat fuga
+                        sequi ad porro molestias suscipit? Inventore.</p>
+                </div>
+            </section>
+
+        </div>
+
+
+        <div class="row">
+            <section class="emty-col"></section>
+            <section class="line"></section>
+            <section class="content">
+                <time>Jan 2022</time>
+                <div class="description">
+                    <h3>some tittle</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur minus optio eos fugiat fuga
+                        sequi ad porro molestias suscipit? Inventore.</p>
+                </div>
+            </section>
+
+        </div>
+
+
+        <div class="row">
+            <section class="emty-col"></section>
+            <section class="line"></section>
+            <section class="content">
+                <time>Jan 2022</time>
+                <div class="description">
+                    <h3>some tittle</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur minus optio eos fugiat fuga
+                        sequi ad porro molestias suscipit? Inventore.</p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('scroll',myFunction);
+        window.addEventListener('load',myFunction);
+
+        function myFunction(){
+            var x = document.querySelectorAll('.description');
+            for(i=0;i< x.length;i++){
+               if(x[i].getBoundingClientRect().top < window.innerHeight / 1.6){
+                x[i].classList.add('show');
+               }
+               if(x[i].getBoundingClientRect().top > window.innerHeight){
+                x[i].classList.remove('show');
+               }
+            }
+        }
+        
+    </script>
+</body>
+</html>

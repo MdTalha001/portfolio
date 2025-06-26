@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif, "Inter";
+            list-style: none;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            min-height: 100vh;
+            background: linear-gradient(#ECEFFF, #CED6FD);
+        }
+
+        .card-list .card-item .card-link {
+            width: 400px;
+            display: block;
+            background-color: #fff;
+            padding: 18px;
+            border-radius: 12px;
+            text-decoration: none;
+            border: 2px solid transparent;
+            transition: 0.2s ease;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-list .card-item .card-link:hover {
+            border-color: #5272F0
+        }
+
+        .card-list .card-link .cart-Image {
+            width: 100%;
+            aspect-ratio: 14 / 7;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .card-link img {
+            width: 360px;
+            height: 250px;
+            border-radius: 10px;
+        }
+
+        .card-list .card-link .badge {
+            color: #5272F0;
+            padding: 8px 12px;
+            font-size: 0.95rem;
+            margin: 16px 0 13px;
+            background: #DDE4FF;
+            width: fit-content;
+            border-radius: 50px;
+        }
+
+        .card-list .card-link .badge.coder {
+            color: black;
+            font-weight: 400;
+            background: #DDE4F5;
+        }
+
+        .card-list .card-link .badge.Designer {
+            color: black;
+            font-weight: 400;
+            background: #c1c4cb;
+        }
+
+        .card-list .card-link .badge.coder {
+            color: rgb(38, 92, 38);
+            background: #9ab8ff;
+        }
+
+        .card-list .card-link .badge.coder {
+            color: aqua;
+            background: #87abff;
+        }
+
+        .card-list .card-link .card-tittle {
+            font-size: 1.19rem;
+            color: black;
+            font-weight: 600;
+        }
+
+        .card-list .card-link .card-button {
+            height: 35px;
+            width: 35px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 50%;
+            margin: 20px 0 5px;
+            color: #5272F0;
+            border: 2px solid #5272F0;
+            transform: rotate(-45deg);
+            transition: 0.4s ease;
+        }
+
+        .card-list .card-link:hover .card-button {
+            color: #fff;
+            background: #5272F0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container swiper">
+        <div class="card-wrapper">
+            <ul class="card-list swiper-wrapper">
+                <li class="card-item swiper-slide">
+                    <a href="#" class="card-link">
+                        <img src="./images/development.jpg" alt="Image" id="Developer">
+                        <p class="badge">Developer</p>
+                        <h2 class="card-tittle">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                        <button class="card-button"><i class="bx bx-arrow-to-right"></i></button>
+                    </a>
+                </li>
+
+                <li class="card-item swiper-slide">
+                    <a href="#" class="card-link">
+                        <img src="./images/coder.jpg" alt="Image" id="coder">
+                        <p class="badge coder">Coder</p>
+                        <h2 class="card-tittle">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                        <button class="card-button"><i class="bx bx-arrow-to-right"></i></button>
+                    </a>
+                </li>
+
+
+                <li class="card-item swiper-slide">
+                    <a href="#" class="card-link">
+                        <img src="./images/design.jpg" alt="Image" id="Designer">
+                        <p class="badge Designer">Designer</p>
+                        <h2 class="card-tittle">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                        <button class="card-button"><i class="bx bx-arrow-to-right"></i></button>
+                    </a>
+                </li>
+
+
+                <li class="card-item swiper-slide">
+                    <a href="#" class="card-link">
+                        <img src="./images/Editor.jpg" alt="Image" id="Editor">
+                        <p class="badge Editor">Editor</p>
+                        <h2 class="card-tittle">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                        <button class="card-button"><i class="bx bx-arrow-to-right"></i></button>
+                    </a>
+                </li>
+
+                <li class="card-item swiper-slide">
+                    <a href="#" class="card-link">
+                        <img src="./images/animation.jpg" alt="Image" id="Animator">
+                        <p class="badge animator">Animator</p>
+                        <h2 class="card-tittle">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                        <button class="card-button"><i class="bx bx-arrow-to-right"></i></button>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+
+</html>

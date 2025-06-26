@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        .container{
+            min-height: 100vh;
+            width: 100%;
+            padding:5%;
+        }
+        .container h1{
+            text-align:center;
+            font-size:1.8rem;
+            font-weight: bold;
+            text-transform: capitalize;
+            position: relative;
+        }
+        .container h1::after{
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 5px;
+            bottom:-5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: blue;
+        }
+        .row{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+            grid-gap:30px;
+        }
+        .service{
+            text-align: center;
+            padding:20px 10px;
+            margin-top: 40px;
+            border-radius: 10px;
+            cursor: pointer;
+            background: transparent;
+            /* border: 2px solid blue; */
+        }
+        .service i{
+            font-size:20px;
+            /* color: blue; */
+            margin-bottom: 6px;
+        }
+        .service h2{
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .service p{
+            font-size:18px;
+            font-weight:400;
+            margin-bottom: 6px;
+        }
+        .service:hover{
+            background: blue;
+            color:#fff;
+            transform: scale(1.05);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>our services</h1>
+        <div class="row">
+            <div class="service">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis in eum adipisci cum facilis sint
+                    eos officia odit vel provident!</p>
+            </div>
+
+
+            <div class="service">
+                <i class="fas fa-chart-pie"></i>
+                <h2>web Develop</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis in eum adipisci cum facilis sint
+                    eos officia odit vel provident!</p>
+            </div>
+
+            <div class="service">
+                <i class="fa-solid fa-mobile-alt"></i>
+                <h2>App Developer</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis in eum adipisci cum facilis sint
+                    eos officia odit vel provident!</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       *{
+        padding:0;
+        margin:0;
+        box-sizing:border-box;
+       }
+       body{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+       }
+       .wrapper{
+        position: relative;
+        width:500px;
+        height:500px;
+        /* background: seagreen; */
+        border-radius: 50%;
+       }
+       .number-hours{
+        position:absolute;
+        width:100%;
+        height:100%;
+        background:purple;
+        border-radius:50%;
+       }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="number-hours">
+
+        </div>
+    </div>
+</body>
+      <script>
+         const numberhours = document.querySelector('.number-hours');
+         const numberElements = [];
+
+         for(let i = 1;i <= 12; i++){
+            numberElements.push(
+                `<span><p>$(i)</p></span>`
+            );
+           
+            }
+            numberhours.insertAdjacentHTML("afterbegin", numberElements.join(""));
+            
+      </script>
+</html>
